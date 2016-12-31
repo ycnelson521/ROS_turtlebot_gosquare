@@ -108,7 +108,7 @@ class GoSquareController
     
     void GoForward(void)
     {
-      twist.linear.x = 0.3;
+      twist.linear.x = 0.1;
       twist.linear.y = 0;
       twist.linear.z = 0;
 
@@ -127,7 +127,7 @@ class GoSquareController
 
       twist.angular.x = 0;
       twist.angular.y = 0;
-      twist.angular.z = -0.38;
+      twist.angular.z = -0.487;
 
     }
 
@@ -199,7 +199,7 @@ int main(int argc, char **argv)
   int state_cycle_limit = 1;
   gs_controller.bumper_hit = false;
 
-  while (ros::ok())
+  while (ros::ok() && (count < 64))
   {
 
 /*    ROS_INFO("twist.linear = [%f, %f, %f], twist.angular = [%f, %f, %f]",
